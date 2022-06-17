@@ -1,0 +1,52 @@
+.main{
+  display: grid;
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.bemvindo{
+  justify-self: center;
+  font-family: 'Ruda', sans-serif;
+  font-size: 35px;
+}
+
+.casarinha{
+  justify-self: center;
+  font-size: 60px;
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2d91bf;
+  margin-bottom: 50px;
+}
+
+.informacoesHome{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 300px));;
+}
+
+.componenteHome{
+  display: grid;
+  grid-template-areas: 
+  "icon phrase"
+  "icon quantity";
+  grid-template-columns: 20% 70%;
+  margin-bottom: 30px;
+  ;
+}
+
+.phrase{
+  grid-area: phrase;
+  align-self: end;
+}
+
+.quantity{
+  grid-area: quantity;
+}
+
+.icon{
+  grid-area: icon;
+  width: 60px;
+  justify-self: right;
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Ruda&display=swap');
+
+body{
+  font-family: 'Questrial', sans-serif;
+  height: 100vh;
+}
+
+.container{
+  display: grid;
+  grid-template-areas:
+  "header header header"
+  "main main main"
+  "footer footer footer";
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.main{
+  grid-area: main;
+}
+
+.header{
+  grid-area: header;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color: #2d91bf;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  color: #2d91bf;
+}
+
+.title{
+  justify-self: center;
+}
+
+table{
+  border-spacing: 0px;
+}

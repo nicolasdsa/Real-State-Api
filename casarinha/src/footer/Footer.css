@@ -1,0 +1,10 @@
+.footer{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color:  #f7f7f7;
+  font-size: 20px;
+  width: 100%;
+  min-width: 100px;
+  margin-top: 50px;
+}

@@ -1,0 +1,25 @@
+.header{
+  display: grid;
+  background-color: #f7f7f7;
+}
+
+.logotipo{
+  width: 170px;
+  justify-self: left;
+}
+
+.listHeader{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  color: #2d91bf;
+  font-family: 20px;
+}
+
+.listHeader li{
+  align-self: center;
+  margin-right: 50px;
+}
+
+
+

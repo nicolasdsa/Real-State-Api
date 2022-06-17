@@ -1,0 +1,16 @@
+.titleTable{
+  border-bottom: 2px solid  #2d91bf;
+  border-left: 1px solid  #2d91bf;
+  border-right: 1px solid  #2d91bf;
+}
+
+.titleTable:nth-child(1){
+  border-left: 0px;
+}
+.titleTable:nth-child(5){
+  border-right: 0px;
+}
+
+th, td {
+  padding: 5px;
+}
