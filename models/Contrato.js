@@ -11,6 +11,11 @@ class contratoModel extends Model {
   async sum(){
     return this.sumModel();
   }
+
+  async select(condition){
+    return this.selectModel(condition);
+  }
+
 }
 
 module.exports = new contratoModel();

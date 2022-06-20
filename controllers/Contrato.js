@@ -23,12 +23,16 @@ class contratoController {
     const informationValida = await validaController.selectAll();
     const informationContrato = await contratoModel.selectAll();
     const informationCartorio = await cartorioController.selectAll();
-    console.log(informationVistoria[0]);
     
     const result = {informationVistoria: informationVistoria[0], informationVistora: informationVistora[0], informationEncerra: informationEncerra[0], informationValida: informationValida[0], informationContrato: informationContrato[0], informationCartorio: informationCartorio[0]};
 
     return result
 
+  }
+
+  async select(condition){
+    const select = contratoModel.select(condition);
+    return select
   }
 }
 

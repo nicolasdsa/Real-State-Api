@@ -8,6 +8,10 @@ class vistoraModel extends Model {
   async selectAll(){
     return this.selectAllModel();
   }
+
+  async select(condition){
+    return this.selectModel(condition);
+  }
 }
 
 module.exports = new vistoraModel();

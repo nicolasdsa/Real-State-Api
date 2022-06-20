@@ -8,6 +8,18 @@ class encerraModel extends Model {
   async selectAll(){
     return this.selectAllModel();
   }
+
+  async select(condition){
+    return this.selectModel(condition);
+  }
+
+  async delete(condition){
+    return this.deleteModel(condition);
+  }
+
+  async create(json, names){
+    return this.createModelContratos(json, names);
+  }
 }
 
 module.exports = new encerraModel();

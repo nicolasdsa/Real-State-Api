@@ -15,6 +15,18 @@ class locadorModel extends Model {
   async selectAll(){
     return this.selectAllModel();
   }
+
+  async select(condition){
+    return this.selectModel(condition);
+  }
+
+  async create(json, names){
+    return this.createModelPessoas(json, names);
+  }
+
+  async delete(condition){
+    return this.deleteModel(condition);
+  }
 }
 
 module.exports = new locadorModel();

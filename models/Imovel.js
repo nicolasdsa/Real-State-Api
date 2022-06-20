@@ -21,7 +21,17 @@ class imovelModel extends Model {
     return this.notInnerjoin();
   }
 
+  async select(condition){
+    return this.selectModel(condition);
+  }
 
+  async create(json, names){
+    return this.createModelImoveis(json, names);
+  }
+
+  async delete(condition){
+    return this.deleteModel(condition);
+  }
 
 }
 

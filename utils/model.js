@@ -4,6 +4,10 @@ class Model {
   constructor(tableName) {
     this.tableName = tableName;
   }
+
+  selectModel(condition){
+    return database.query(`SELECT * FROM ${this.tableName} ${condition}`);
+  }
   
   selectAllModel() {
     return database.query(`SELECT * FROM ${this.tableName}`);
@@ -27,6 +31,22 @@ class Model {
 
   notInnerjoin(){
     return database.query(`SELECT COUNT(*) as 'Vagos' FROM Locador INNER JOIN ${this.tableName} on (CPFLocador = CPF) WHERE CPFLocatario IS NULL;`)
+  }
+
+  createModelPessoas(json, names){
+    return database.query(`INSERT INTO ${this.tableName} (${names}) VALUES ('${json.CPF}', '${json.Nome}', ${json.Idade}, '${json.Telefone}', '${json.Email}');`);
+  }
+
+  createModelImoveis(json, names){
+    return database.query(`INSERT INTO ${this.tableName} (${names}) VALUES ('${json.Id}', '${json.Tipo}', '${json.Endereco}', '${json.CPFLocador}', '${json.CPFLocatario}');`);
+  }
+
+  createModelContratos(json, names){
+    return database.query(`INSERT INTO ${this.tableName} (${names}) VALUES ('${json.IdContrato}', '${json.CNPJCartorio}', '${json.Comprovante}');`);
+  }
+
+  deleteModel(condition){
+    return database.query(`DELETE FROM ${this.tableName} ${condition}`);
   }
 }
 
